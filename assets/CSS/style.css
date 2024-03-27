@@ -64,5 +64,73 @@
   cursor: pointer;
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.4);
 }
+.button:hover {
+  background-color: lighten grey, 30%;
+}
+
+.function {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 0 20px 0 30px;
+}
+.function h2 {
+  font-family: "Roboto";
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 0;
+}
+.function ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-left: 0;
+}
+.function ul li {
+  display: flex;
+  align-items: center;
+}
+.function ul i {
+  font-size: 1.5rem;
+  padding-left: 30px;
+  color: grey;
+}
+.function ul i.third-icon {
+  color: #9356dc;
+}
+.function ul h3 {
+  font-size: 1.12rem;
+  text-align: left;
+  font-family: "Roboto";
+  font-weight: 500;
+  margin: 0;
+}
+.function ul .function__list {
+  width: 100%;
+  height: 70px;
+  background-color: #f2f2f2;
+  border-radius: 30px;
+  padding: 10px;
+  position: relative;
+  gap: 30px;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.4);
+}
+.function ul .function__list__number {
+  width: 25px;
+  height: 25px;
+  font-family: "Roboto";
+  font-size: 1rem;
+  background-color: #9356dc;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -50px;
+  top: 35%;
+  transform: translateY(-50%);
+}
 
 /*# sourceMappingURL=style.css.map */
