@@ -1,39 +1,68 @@
-body {
-    margin: 0;
+.header {
+  font-family: "Shrikhand";
+  font-size: 1.87rem;
+  text-align: center;
+  margin: 10px 0;
+  color: black;
 }
 
-.header{
-    font-family: "Shrikhand";
-    font-size: 30px;
-    text-align: center;
-    margin: 10px 0px 10px 0px;
-  }
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #eaeaea;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.4);
+}
+.location form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.location form i {
+  padding-right: 10px;
+}
+.location form p {
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
 
-  .location p {
-    font-family: "Roboto";
-    font-size: 18px;
-    font-weight: 400;
-    text-align: center;
-    margin: 0;
-  }
+.explorer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+.explorer h1 {
+  font-family: "Roboto";
+  font-size: 1.375rem;
+  text-align: center;
+  margin-top: 20px;
+}
+.explorer p {
+  font-family: "Roboto";
+  font-size: 1.12rem;
+  font-weight: 200;
+  text-align: center;
+  margin: 0;
+}
 
-  .location form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.button {
+  font-family: "Roboto";
+  font-size: 1.12rem;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 20px 25px;
+  text-align: center;
+  margin: 30px 0 50px 0;
+  cursor: pointer;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.4);
+}
 
-  .location {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    background-color: #eaeaea;
-    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.4);
-  }
-
-  .fa-solid {
-    color: black;
-    padding-right: 10px;
-  }
+/*# sourceMappingURL=style.css.map */
