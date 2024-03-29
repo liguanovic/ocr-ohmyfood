@@ -6,9 +6,10 @@ $secondary-color: #9356dc;
 $tertiary-color: #99e2d0;
 
 $box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.1);
-    
 
-html, body {
+
+html,
+body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -229,32 +230,44 @@ html, body {
             height: 70px;
             margin: 20px 0 0 10px;
 
-            h4 {
-                font-family: $text-font;
-                font-size: 1.12rem;
-                font-weight: bold;
-                color: black;
-                margin: 0;
-            }
-
+            h4,
             p {
                 font-family: $text-font;
                 font-size: 1.12rem;
-                font-weight: 300;
                 color: black;
                 margin: 0;
             }
-            
 
-            i {
+            h4 {
+                font-weight: bold;
+            }
+
+            p {
+                font-weight: 300;
+            }
+
+
+            .restaurants__card__heart--empty {
                 position: absolute;
                 right: 20px;
-                top: 20px;
                 font-size: 1.5rem;
-                color: $secondary-color;
+                color: black;
+            
+
+                &:hover {
+                position: absolute;
+                right: 20px;
+                font-size: 1.5rem;
+                color: transparent;
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+                background-clip: text;
+                -webkit-background-clip: text;
             }
         }
-    
+        }
+
+
+
 
         .restaurants__card__new {
             position: absolute;
@@ -271,6 +284,8 @@ html, body {
             height: 20px;
         }
 
+
+
         .restaurants__card__text {
             display: flex;
             flex-direction: column;
@@ -278,69 +293,70 @@ html, body {
             padding-left: 5px;
         }
 
-        
+
 
     }
 }
 
-        .footer {
-            display: flex;
-            flex-direction: column;
-            background: #363232;
-            padding: 20px 20px 20px 25px;
+.footer {
+    display: flex;
+    flex-direction: column;
+    background: #363232;
+    padding: 20px 20px 20px 25px;
 
-        h2 {
-            font-family: $header-font;
-            font-size: 1.3rem;
-            color: white;
-        }
-
-        ul {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            padding: 0;
-            margin: 0;
-
-            li {
-                display: flex;
-                font-family: $text-font;
-                font-size: 0.87rem;
-                padding-bottom: 5px;
-                &.footer__list {
-                    display: flex;
-                    align-items: center;
-                    font-weight: 500;   
-
-                    &:nth-child(2) {
-                        margin-right: -2px;
-                    }
-                }
-            }
-
-            a{
-                text-decoration: none;
-                color: white;
-                font-family: $text-font;
-                font-size: 1.12rem;
-
-                i {
-                    margin-right: 10px;
-                    font-size: 0.87rem;
-                }
-            }
-
-                .footer_icon {
-                    color: white;
-                    gap: 5px;
-                    padding-right: 10px;
-
-                    &.fa-utensils {
-                        padding-right: 15px;
-                }
-            }
-            
-        }
-
-        
+    h2 {
+        font-family: $header-font;
+        font-size: 1.3rem;
+        color: white;
     }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: flex;
+            font-family: $text-font;
+            font-size: 0.87rem;
+            padding-bottom: 5px;
+
+            &.footer__list {
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+
+                &:nth-child(2) {
+                    margin-right: -2px;
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: $text-font;
+            font-size: 1.12rem;
+
+            i {
+                margin-right: 10px;
+                font-size: 0.87rem;
+            }
+        }
+
+        .footer_icon {
+            color: white;
+            gap: 5px;
+            padding-right: 10px;
+
+            &.fa-utensils {
+                padding-right: 15px;
+            }
+        }
+
+    }
+
+
+}

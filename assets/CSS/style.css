@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -200,26 +201,33 @@ html, body {
   height: 70px;
   margin: 20px 0 0 10px;
 }
-.restaurants .restaurants__card .restaurants__card__content h4 {
-  font-family: "Roboto";
-  font-size: 1.12rem;
-  font-weight: bold;
-  color: black;
-  margin: 0;
-}
+.restaurants .restaurants__card .restaurants__card__content h4,
 .restaurants .restaurants__card .restaurants__card__content p {
   font-family: "Roboto";
   font-size: 1.12rem;
-  font-weight: 300;
   color: black;
   margin: 0;
 }
-.restaurants .restaurants__card .restaurants__card__content i {
+.restaurants .restaurants__card .restaurants__card__content h4 {
+  font-weight: bold;
+}
+.restaurants .restaurants__card .restaurants__card__content p {
+  font-weight: 300;
+}
+.restaurants .restaurants__card .restaurants__card__content .restaurants__card__heart--empty {
   position: absolute;
   right: 20px;
-  top: 20px;
   font-size: 1.5rem;
-  color: #9356dc;
+  color: black;
+}
+.restaurants .restaurants__card .restaurants__card__content .restaurants__card__heart--empty:hover {
+  position: absolute;
+  right: 20px;
+  font-size: 1.5rem;
+  color: transparent;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 .restaurants .restaurants__card .restaurants__card__new {
   position: absolute;
