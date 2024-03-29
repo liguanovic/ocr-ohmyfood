@@ -6,25 +6,34 @@ html, body {
 }
 
 .header {
+  display: flex;
+  justify-content: center;
+  position: relative;
   font-family: "Shrikhand";
   font-size: 1.87rem;
   text-align: center;
-  margin: 10px 0;
+  margin: 0;
   color: black;
+  line-height: 60px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
-.header h1 {
+.header h2 {
   text-align: center;
 }
 
 .location {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 50px;
+  margin: 0;
   background-color: #eaeaea;
-  box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
+  z-index: 1;
 }
 .location form {
   display: flex;
@@ -43,16 +52,19 @@ html, body {
 }
 
 .explorer {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #f6f6f6;
+  z-index: 0;
 }
 .explorer h1 {
   font-family: "Roboto";
   font-size: 1.375rem;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
+  max-width: 60%;
 }
 .explorer p {
   font-family: "Roboto";
@@ -60,6 +72,7 @@ html, body {
   font-weight: 200;
   text-align: center;
   margin: 0;
+  max-width: 90%;
 }
 
 .button {
@@ -71,7 +84,7 @@ html, body {
   color: white;
   padding: 20px 25px;
   text-align: center;
-  margin: 30px 0 50px 0;
+  margin: 30px 0 60px 0;
   cursor: pointer;
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.4);
 }
@@ -84,6 +97,7 @@ html, body {
   flex-direction: column;
   background-color: white;
   margin-bottom: 50px;
+  margin-top: 40px;
 }
 .function h2 {
   font-family: "Roboto";
@@ -148,7 +162,7 @@ html, body {
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
-  padding: 0 20px;
+  padding: 0 20px 70px;
 }
 .restaurants a {
   display: flex;
@@ -157,7 +171,7 @@ html, body {
 }
 .restaurants h2 {
   font-family: "Roboto";
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   text-align: left;
   padding: 40px 0 0;
 }
@@ -167,7 +181,6 @@ html, body {
   background: white;
   border-radius: 20px;
   margin-bottom: 20px;
-  box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.1);
   position: relative;
   width: 100%;
 }
@@ -226,23 +239,24 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding-left: 5px;
 }
 
 .footer {
   display: flex;
   flex-direction: column;
   background: #363232;
-  padding-left: 10px;
+  padding: 20px 20px 20px 25px;
 }
 .footer h2 {
   font-family: "Shrikhand";
-  font-size: 0.87rem;
+  font-size: 1.3rem;
   color: white;
 }
 .footer ul {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   padding: 0;
   margin: 0;
 }
@@ -250,21 +264,33 @@ html, body {
   display: flex;
   font-family: "Roboto";
   font-size: 0.87rem;
+  padding-bottom: 5px;
+}
+.footer ul li.footer__list {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.footer ul li.footer__list:nth-child(2) {
+  margin-right: -2px;
 }
 .footer ul a {
   text-decoration: none;
   color: white;
   font-family: "Roboto";
-  font-size: 0.87rem;
+  font-size: 1.12rem;
 }
 .footer ul a i {
   margin-right: 10px;
   font-size: 0.87rem;
 }
 .footer ul .footer_icon {
-  font-size: 0.8rem;
   color: white;
+  gap: 5px;
   padding-right: 10px;
+}
+.footer ul .footer_icon.fa-utensils {
+  padding-right: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
