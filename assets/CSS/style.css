@@ -75,6 +75,14 @@ body {
   margin: 0;
   max-width: 90%;
 }
+@media screen and (min-width: 768px) {
+  .explorer h1 {
+    font-size: 2.2rem;
+  }
+  .explorer p {
+    font-size: 1rem;
+  }
+}
 
 .button {
   font-family: "Roboto";
@@ -91,6 +99,12 @@ body {
 }
 .button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+@media screen and (min-width: 768px) {
+  .button {
+    font-size: 0.9rem;
+    padding: 15px 15px;
+  }
 }
 
 .function {
@@ -158,6 +172,16 @@ body {
   top: 35%;
   transform: translateY(-50%);
 }
+@media screen and (min-width: 768px) {
+  .function ul {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .function h2 {
+    padding-left: 130px;
+  }
+}
 
 .restaurants {
   display: flex;
@@ -214,20 +238,35 @@ body {
 .restaurants .restaurants__card .restaurants__card__content p {
   font-weight: 300;
 }
-.restaurants .restaurants__card .restaurants__card__content .restaurants__card__heart--empty {
+.restaurants .restaurants__card .restaurants__card__heart {
   position: absolute;
-  right: 20px;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  right: 30px;
+}
+.restaurants .restaurants__card .restaurants__card__heart .restaurants__card__heart--empty {
   color: black;
 }
-.restaurants .restaurants__card .restaurants__card__content .restaurants__card__heart--empty:hover {
-  position: absolute;
-  right: 20px;
-  font-size: 1.5rem;
-  color: transparent;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+.restaurants .restaurants__card .restaurants__card__heart .restaurants__card__heart--full {
+  display: none;
+}
+.restaurants .restaurants__card .restaurants__card__heart:hover .restaurants__card__heart--empty {
+  display: none;
+}
+.restaurants .restaurants__card .restaurants__card__heart:hover .restaurants__card__heart--full {
+  display: block;
+  animation: fillHeart 3s forwards;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   background-clip: text;
   -webkit-background-clip: text;
+}
+@keyframes fillHeart {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: transparent;
+    background-size: 100% auto;
+  }
 }
 .restaurants .restaurants__card .restaurants__card__new {
   position: absolute;
@@ -248,6 +287,15 @@ body {
   flex-direction: column;
   gap: 5px;
   padding-left: 5px;
+}
+@media screen and (min-width: 768px) {
+  .restaurants .restaurants {
+    flex-direction: row;
+  }
+  .restaurants .restaurants__card {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }
 
 .footer {
