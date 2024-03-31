@@ -1,4 +1,4 @@
-$header-font: "Shrikhand";
+$footer-font: "Shrikhand";
 $text-font: "Roboto";
 
 $primary-color: #ff79da;
@@ -16,21 +16,18 @@ body {
     height: 100%;
 }
 
-.header {
+header {
     display: flex;
     justify-content: center;
     position: relative;
-    font-family: $header-font;
-    font-size: 1.87rem;
-    text-align: center;
-    margin: 0;
-    color: black;
-    line-height: 60px;
+    align-items: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    height: 60px;
     z-index: 2;
 
-    h2 {
-        text-align: center;
+    img {
+        width: 170px;
+        height: 30px;
     }
 }
 
@@ -364,7 +361,7 @@ body {
     padding: 20px 20px 20px 25px;
 
     h2 {
-        font-family: $header-font;
+        font-family: $footer-font;
         font-size: 1.3rem;
         color: white;
     }
