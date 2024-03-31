@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body {
   margin: 0;
@@ -166,7 +167,7 @@ header img {
   align-items: center;
   position: absolute;
   left: -50px;
-  top: 35%;
+  top: 30%;
   transform: translateY(-50%);
 }
 @media screen and (min-width: 768px) {
@@ -174,9 +175,13 @@ header img {
     flex-direction: row;
     justify-content: space-between;
     margin: 0;
+    gap: 0;
   }
   .function h2 {
     padding-left: 130px;
+  }
+  .function .function__list {
+    width: 100%;
   }
 }
 
@@ -288,10 +293,12 @@ header img {
 @media screen and (min-width: 768px) {
   .restaurants .restaurants {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 20px 70px;
   }
   .restaurants .restaurants__card {
-    flex-wrap: wrap;
-    gap: 20px;
+    width: 45%;
   }
 }
 
@@ -305,6 +312,7 @@ header img {
   font-family: "Shrikhand";
   font-size: 1.3rem;
   color: white;
+  margin: 0; /* Ajout de cette ligne pour supprimer la marge par défaut du titre h2 */
 }
 .footer ul {
   display: flex;
@@ -315,17 +323,13 @@ header img {
 }
 .footer ul li {
   display: flex;
+  align-items: center;
   font-family: "Roboto";
   font-size: 0.87rem;
   padding-bottom: 5px;
 }
 .footer ul li.footer__list {
-  display: flex;
-  align-items: center;
   font-weight: 500;
-}
-.footer ul li.footer__list:nth-child(2) {
-  margin-right: -2px;
 }
 .footer ul a {
   text-decoration: none;
@@ -344,6 +348,22 @@ header img {
 }
 .footer ul .footer_icon.fa-utensils {
   padding-right: 15px;
+}
+@media screen and (min-width: 768px) {
+  .footer ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    order: 2;
+    gap: 20px;
+  }
+  .footer h2 {
+    text-align: right;
+    order: 1;
+    padding: 20px 40px 20px 80px;
+  }
+  .footer li:nth-child(3) {
+    margin-right: 40px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

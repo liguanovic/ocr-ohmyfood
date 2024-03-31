@@ -192,7 +192,7 @@ header {
             align-items: center;
             position: absolute;
             left: -50px;
-            top: 35%;
+            top: 30%;
             transform: translateY(-50%);
         }
     }
@@ -204,13 +204,20 @@ header {
             flex-direction: row;
             justify-content: space-between;
             margin: 0;
+            gap: 0;
         }
 
         h2 {
             padding-left: 130px;
         }
+
+        .function__list {
+            width: 100%;
+        }
+        }
+
     }
-}
+
 
 .restaurants {
     display: flex;
@@ -345,12 +352,16 @@ header {
 
         .restaurants {
             flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0 20px 70px;
         }
 
         .restaurants__card {
-            flex-wrap: wrap;
-            gap: 20px;
+            width: 45%;
         }
+    
+
     }
 }
 
@@ -364,6 +375,7 @@ header {
         font-family: $footer-font;
         font-size: 1.3rem;
         color: white;
+        margin: 0; /* Ajout de cette ligne pour supprimer la marge par défaut du titre h2 */
     }
 
     ul {
@@ -375,18 +387,13 @@ header {
 
         li {
             display: flex;
+            align-items: center; 
             font-family: $text-font;
             font-size: 0.87rem;
             padding-bottom: 5px;
 
             &.footer__list {
-                display: flex;
-                align-items: center;
                 font-weight: 500;
-
-                &:nth-child(2) {
-                    margin-right: -2px;
-                }
             }
         }
 
@@ -411,8 +418,26 @@ header {
                 padding-right: 15px;
             }
         }
-
     }
 
+    @media screen and (min-width: 768px) {
+        ul {
+            flex-direction: row;
+            justify-content: flex-end; 
+            order: 2;
+            gap: 20px;
+        }
 
+        h2 {
+            text-align: right;
+            order: 1;
+            padding: 20px 40px 20px 80px;
+        }
+
+        li {
+            &:nth-child(3) {
+                margin-right: 40px;
+            }
+        }
+    }
 }
