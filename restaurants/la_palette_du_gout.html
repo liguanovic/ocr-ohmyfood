@@ -7,7 +7,7 @@
 
     <title>Oh my food - La palette du goût</title>
 
-    <link rel="stylesheet" href="assets/CSS/restaurant.css">
+    <link rel="stylesheet" href="/assets/CSS/restaurant.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,18 +19,19 @@
 
 <body>
     <header>
-        <a href="index.html">
+        <a href="/index.html">
             <button class="header__button">
                 <i class="fas fa-arrow-left"></i>
             </button>
         </a>
-        <img src="assets/images/logo/ohmyfood.png" alt="logo oh my food">
+        <img src="/assets/images/logo/ohmyfood.png" alt="logo oh my food">
     </header>
 
     <main>
-        <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+        <img src="/assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
 
-        <figure>
+    <div class="menu">
+        <figure class="menu__title">
             <h1>La palette du goût</h1>
             <figcaption class="heart">
                 <i class="far fa-heart heart__empty"></i>
@@ -39,7 +40,10 @@
         </figure>
 
         <section class="menu">
+            <figure class="menu__title">
             <h2>ENTRÉES</h2>
+            <hr class="underline">
+            </figure>
 
             <figure class="menu__card">
                 <figcaption class="menu__card__text">
@@ -70,7 +74,10 @@
         </section>
 
         <section class="menu">
+            <figure class="menu__title">
             <h2>PLATS</h2>
+            <hr class="underline">
+            </figure>
 
             <figure class="menu__card">
                 <figcaption class="menu__card__text">
@@ -101,7 +108,10 @@
         </section>
 
         <section class="menu">
+            <figure class="menu__title">
             <h2>DESSERTS</h2>
+            <hr class="underline">
+            </figure>
 
             <figure class="menu__card">
                 <figcaption class="menu__card__text">
@@ -132,6 +142,7 @@
         </section>
 
         <button class="menu__button">Commander</button>
+    </div>
 
     </main>
 

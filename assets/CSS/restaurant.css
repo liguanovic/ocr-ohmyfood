@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -7,24 +8,203 @@ html, body {
 
 header {
   display: flex;
-  justify-content: center;
-  position: relative;
+  justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   height: 60px;
-  z-index: 2;
+  position: relative;
 }
 header img {
   width: 170px;
   height: 30px;
+  margin: 0 auto;
 }
 header .header__button {
-  position: absolute;
-  left: 20px;
   border: none;
   background-color: transparent;
   cursor: pointer;
   color: black;
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 80px;
+  }
+  header .header__button {
+    font-size: 1rem;
+  }
+}
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+
+.menu {
+  position: relative;
+  background: #f6f6f6;
+  display: grid;
+  width: 100%;
+  margin: auto;
+  margin-top: -35px;
+  padding-bottom: 40px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  max-width: 1050px;
+  z-index: 1;
+}
+.menu h1 {
+  text-align: center;
+  font-family: "Shrikhand";
+}
+.menu .menu__title h2 {
+  font-family: "Roboto";
+  font-weight: 200;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.menu .menu__title hr {
+  border: 2px solid #99e2d0;
+  width: 40px;
+  margin: 0;
+}
+.menu .menu__card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.1);
+}
+.menu .menu__card .menu__card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 5px;
+}
+.menu .menu__card .menu__card__text h3 {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+}
+.menu .menu__card .menu__card__text p {
+  font-family: "Roboto";
+  font-weight: 200;
+  font-size: 1rem;
+  margin: 0;
+}
+.menu .menu__card .menu__card__price {
+  position: absolute;
+  font-family: "Roboto";
+  font-weight: 400;
+  right: 20px;
+  bottom: 20px;
+}
+.menu .menu__card .menu__card__check {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.menu .menu__card:hover .menu__card__check {
+  opacity: 1;
+}
+.menu .menu__card__check {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0;
+}
+.menu .menu__card__check:hover {
+  opacity: 1;
+}
+.menu .menu__card__check i {
+  font-size: 1.5rem;
+}
+
+.menu__button {
+  font-family: "Roboto";
+  font-size: 1.12rem;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 20px 25px;
+  text-align: center;
+  margin: 30px 0 60px 0;
+  cursor: pointer;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.4);
+}
+.menu__button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background: #363232;
+  padding: 20px 20px 20px 25px;
+}
+.footer h2 {
+  font-family: "Shrikhand";
+  font-size: 1.3rem;
+  color: white;
+  margin: 0;
+}
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+}
+.footer ul li {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto";
+  font-size: 0.87rem;
+  padding-bottom: 5px;
+}
+.footer ul li.footer__list {
+  font-weight: 500;
+}
+.footer ul a {
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto";
+  font-size: 1.12rem;
+  font-weight: 300;
+}
+.footer ul a i {
+  margin-right: 10px;
+  font-size: 0.87rem;
+}
+.footer ul .footer_icon {
+  color: white;
+  gap: 5px;
+  padding-right: 10px;
+}
+.footer ul .footer_icon.fa-utensils {
+  padding-right: 15px;
+}
+@media screen and (min-width: 768px) {
+  .footer ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    order: 2;
+    gap: 20px;
+  }
+  .footer h2 {
+    text-align: right;
+    order: 1;
+    padding: 20px 40px 20px 80px;
+  }
+  .footer li:nth-child(3) {
+    margin-right: 40px;
+  }
 }
 
 /*# sourceMappingURL=restaurant.css.map */

@@ -29,7 +29,17 @@ header {
         width: 170px;
         height: 30px;
     }
+
 }
+
+    @media screen and (min-width: 768px) {
+
+        header {
+            height: 80px;
+        }
+        
+    }
+
 
 .location {
     position: relative;
@@ -89,7 +99,12 @@ header {
         max-width: 90%;
     }
 
+}
+
     @media screen and (min-width: 768px) {
+
+        .explorer {
+
         h1 {
             font-size: 2.2rem;
         }
@@ -98,7 +113,6 @@ header {
             font-size: 1rem;
         }
     }
-
 }
 
 .button {
@@ -326,7 +340,7 @@ header {
             right: 20px;
             top: 20px;
             background-color: #99e2d0;
-            color: #127953;
+            color: #008766;            ;
             font-family: "Roboto";
             font-weight: 500;
             padding: 5px;
@@ -375,7 +389,7 @@ header {
         font-family: $footer-font;
         font-size: 1.3rem;
         color: white;
-        margin: 0; /* Ajout de cette ligne pour supprimer la marge par défaut du titre h2 */
+        margin: 0;
     }
 
     ul {

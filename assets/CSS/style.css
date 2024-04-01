@@ -21,6 +21,11 @@ header img {
   height: 30px;
 }
 
+@media screen and (min-width: 768px) {
+  header {
+    height: 80px;
+  }
+}
 .location {
   position: relative;
   display: flex;
@@ -73,6 +78,7 @@ header img {
   margin: 0;
   max-width: 90%;
 }
+
 @media screen and (min-width: 768px) {
   .explorer h1 {
     font-size: 2.2rem;
@@ -81,7 +87,6 @@ header img {
     font-size: 1rem;
   }
 }
-
 .button {
   font-family: "Roboto";
   font-size: 1.12rem;
@@ -276,7 +281,7 @@ header img {
   right: 20px;
   top: 20px;
   background-color: #99e2d0;
-  color: #127953;
+  color: #008766;
   font-family: "Roboto";
   font-weight: 500;
   padding: 5px;
