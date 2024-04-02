@@ -16,6 +16,14 @@ body {
     height: 100%;
 }
 
+@media screen and (min-width: 768px) {
+    .function , .restaurants__section {
+        border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    }
+}
+
+
 header {
     display: flex;
     justify-content: center;
@@ -235,18 +243,17 @@ header {
     background-color: #f6f6f6;
     padding: 0 20px 70px;
 
-    .restaurants {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    
-
     h2 {
         font-family: $text-font;
         font-size: 1.7rem;
         text-align: left;
         padding: 40px 0 0;
+    }
+
+    .restaurants {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
     .restaurants__card {
