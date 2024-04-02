@@ -181,41 +181,43 @@ header img {
     margin: 0;
     gap: 0;
   }
-  .function h2 {
-    padding-left: 130px;
-  }
   .function .function__list {
     width: 100%;
   }
 }
 
-.restaurants {
+.restaurants__section {
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
   padding: 0 20px 70px;
 }
-.restaurants a {
+.restaurants__section .restaurants {
   display: flex;
-  text-align: left;
-  text-decoration: none;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-.restaurants h2 {
+.restaurants__section h2 {
   font-family: "Roboto";
   font-size: 1.7rem;
   text-align: left;
   padding: 40px 0 0;
 }
-.restaurants .restaurants__card {
+.restaurants__section .restaurants__card {
   display: flex;
   flex-direction: column;
   background: white;
   border-radius: 20px;
   margin-bottom: 20px;
   position: relative;
+  text-decoration: none;
   width: 100%;
+  text-align: left;
 }
-.restaurants .restaurants__card img {
+.restaurants__section .restaurants__card:hover {
+  text-decoration: none;
+}
+.restaurants__section .restaurants__card img {
   position: relative;
   width: 100%;
   height: 200px;
@@ -223,7 +225,10 @@ header img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.restaurants .restaurants__card .restaurants__card__content {
+.restaurants__section .restaurants__card a {
+  text-decoration: none;
+}
+.restaurants__section .restaurants__card .restaurants__card__content {
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -231,34 +236,34 @@ header img {
   height: 70px;
   margin: 20px 0 0 10px;
 }
-.restaurants .restaurants__card .restaurants__card__content h4,
-.restaurants .restaurants__card .restaurants__card__content p {
+.restaurants__section .restaurants__card .restaurants__card__content h4,
+.restaurants__section .restaurants__card .restaurants__card__content p {
   font-family: "Roboto";
   font-size: 1.12rem;
   color: black;
   margin: 0;
 }
-.restaurants .restaurants__card .restaurants__card__content h4 {
+.restaurants__section .restaurants__card .restaurants__card__content h4 {
   font-weight: bold;
 }
-.restaurants .restaurants__card .restaurants__card__content p {
+.restaurants__section .restaurants__card .restaurants__card__content p {
   font-weight: 300;
 }
-.restaurants .restaurants__card .restaurants__card__heart {
+.restaurants__section .restaurants__card .restaurants__card__heart {
   position: absolute;
   font-size: 2rem;
   right: 30px;
 }
-.restaurants .restaurants__card .restaurants__card__heart .restaurants__card__heart--empty {
+.restaurants__section .restaurants__card .restaurants__card__heart .restaurants__card__heart--empty {
   color: black;
 }
-.restaurants .restaurants__card .restaurants__card__heart .restaurants__card__heart--full {
+.restaurants__section .restaurants__card .restaurants__card__heart .restaurants__card__heart--full {
   display: none;
 }
-.restaurants .restaurants__card .restaurants__card__heart:hover .restaurants__card__heart--empty {
+.restaurants__section .restaurants__card .restaurants__card__heart:hover .restaurants__card__heart--empty {
   display: none;
 }
-.restaurants .restaurants__card .restaurants__card__heart:hover .restaurants__card__heart--full {
+.restaurants__section .restaurants__card .restaurants__card__heart:hover .restaurants__card__heart--full {
   display: block;
   animation: fillHeart 3s forwards;
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
@@ -274,7 +279,7 @@ header img {
     background-size: 100% auto;
   }
 }
-.restaurants .restaurants__card .restaurants__card__new {
+.restaurants__section .restaurants__card .restaurants__card__new {
   position: absolute;
   text-align: center;
   right: 20px;
@@ -288,24 +293,23 @@ header img {
   width: 80px;
   height: 20px;
 }
-.restaurants .restaurants__card .restaurants__card__text {
+.restaurants__section .restaurants__card .restaurants__card__text {
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding-left: 5px;
 }
+
 @media screen and (min-width: 768px) {
-  .restaurants .restaurants {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 0 20px 70px;
+  .restaurants__section {
+    display: grid;
   }
-  .restaurants .restaurants__card {
-    width: 45%;
+  .restaurants__section .restaurants {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
-
 .footer {
   display: flex;
   flex-direction: column;

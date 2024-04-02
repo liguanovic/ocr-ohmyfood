@@ -32,13 +32,13 @@ header {
 
 }
 
-    @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
-        header {
-            height: 80px;
-        }
-        
+    header {
+        height: 80px;
     }
+
+}
 
 
 .location {
@@ -101,9 +101,9 @@ header {
 
 }
 
-    @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
-        .explorer {
+    .explorer {
 
         h1 {
             font-size: 2.2rem;
@@ -134,7 +134,7 @@ header {
 
     @media screen and (min-width: 768px) {
         font-size: 0.9rem;
-        padding: 15px 15px; 
+        padding: 15px 15px;
     }
 }
 
@@ -221,35 +221,32 @@ header {
             gap: 0;
         }
 
-        h2 {
-            padding-left: 130px;
-        }
-
         .function__list {
             width: 100%;
         }
-        }
-
     }
 
+}
 
-.restaurants {
+
+    .restaurants__section {
     display: flex;
     flex-direction: column;
     background-color: #f6f6f6;
     padding: 0 20px 70px;
 
-    a {
+    .restaurants {
         display: flex;
-        text-align: left;
-        text-decoration: none;
+        flex-wrap: wrap;
+        gap: 20px;
     }
+    
 
     h2 {
         font-family: $text-font;
         font-size: 1.7rem;
         text-align: left;
-        padding: 40px 0 0
+        padding: 40px 0 0;
     }
 
     .restaurants__card {
@@ -259,7 +256,13 @@ header {
         border-radius: 20px;
         margin-bottom: 20px;
         position: relative;
+        text-decoration: none;
         width: 100%;
+        text-align: left;
+
+        &:hover {
+            text-decoration: none;
+        }
 
         img {
             position: relative;
@@ -268,6 +271,10 @@ header {
             object-fit: cover;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
+        }
+
+        a {
+            text-decoration: none;
         }
 
         .restaurants__card__content {
@@ -292,7 +299,7 @@ header {
 
             p {
                 font-weight: 300;
-            }      
+            }
         }
 
         .restaurants__card__heart {
@@ -324,6 +331,7 @@ header {
                 0% {
                     color: transparent;
                 }
+
                 100% {
                     color: transparent;
                     background-size: 100% auto;
@@ -332,15 +340,13 @@ header {
 
         }
 
-
-
         .restaurants__card__new {
             position: absolute;
             text-align: center;
             right: 20px;
             top: 20px;
             background-color: #99e2d0;
-            color: #008766;            ;
+            color: #008766;
             font-family: "Roboto";
             font-weight: 500;
             padding: 5px;
@@ -349,35 +355,32 @@ header {
             height: 20px;
         }
 
-
-
         .restaurants__card__text {
             display: flex;
             flex-direction: column;
             gap: 5px;
             padding-left: 5px;
         }
-
-
-
     }
 
-    @media screen and (min-width: 768px) {
+}
 
-        .restaurants {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 0 20px 70px;
-        }
 
-        .restaurants__card {
-            width: 45%;
-        }
-    
+@media screen and (min-width: 768px) {
 
+    .restaurants__section {
+        display: grid;
+
+    .restaurants {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        
     }
 }
+}
+
+
 
 .footer {
     display: flex;
@@ -401,13 +404,13 @@ header {
 
         li {
             display: flex;
-            align-items: center; 
+            align-items: center;
             font-family: $text-font;
             font-size: 0.87rem;
             padding-bottom: 5px;
             font-weight: 400;
 
-            &:nth-child(4){
+            &:nth-child(4) {
                 font-weight: 300;
             }
 
@@ -442,7 +445,7 @@ header {
     @media screen and (min-width: 768px) {
         ul {
             flex-direction: row;
-            justify-content: flex-end; 
+            justify-content: flex-end;
             order: 2;
             gap: 20px;
         }
