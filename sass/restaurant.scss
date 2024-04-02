@@ -55,40 +55,95 @@ img {
     height: 350px;
 }
 
+
 .menu {
     position: relative;
-    align-items: center;
     background: #f6f6f6;
     display: grid;
-    width: 100%;
     margin: auto;
     margin-top: -35px;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
-    max-width: 1050px;
-    z-index: 1;
 
-    h1 {
-        font-family: $footer-font;
+    .title {
+        position: relative;
+        display: inline-block; 
+        margin: 20px 15px 0;
+    
+        h1 {
+            font-family: $footer-font;
+            margin: 0;
+            display: inline-block;
+            position: relative;
         }
+    
+        .heart {
+            font-size: 2rem;
+            position: absolute;
+            top: 50%;
+            right: -40px;
+            transform: translateY(-50%);
+        
+            .heart--empty {
+                color: black;
+            }
+        
+            .heart--full {
+                display: none;
+            }
+        
+            &:hover .heart--empty {
+                display: none;
+            }
+        
+            &:hover .heart--full {
+                display: block;
+                animation: fillHeart 3s forwards;
+                background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+        }
+        
+        @keyframes fillHeart {
+            0% {
+                color: transparent;
+            }
+            100% {
+                color: transparent;
+                background-size: 100% auto;
+            }
+        }
+    }
+    
+
+
 
     .menu__title {
-            
-    h2 {
-        font-family: $text-font;
-        font-weight: 200;
-        font-size: 1rem;
-        margin-bottom: 5px;
-        margin-top: 40px;
-    }
+        position: relative;
+        text-align: left;
+        display: inline-block; 
+        margin: 0 20px 15px;
 
-    hr {
-        border: 2px solid $tertiary-color;
-        width: 40px;
-        margin: 0;
-    }
+        h2 {
+            font-family: $text-font;
+            font-weight: 200;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            margin-top: 40px;
+        }
 
-}
+        hr {
+            border: 2px solid $tertiary-color;
+            width: 40px;
+            margin: 0;
+        }
+
+        
+        
+
+        
+    }
 
     .menu__card {
         display: flex;
@@ -96,9 +151,8 @@ img {
         flex-direction: column;
         background: white;
         border-radius: 20px;
-        margin-top: 2px;
-        margin-bottom: 10px;
-        padding: 15px; 
+        margin : 10px 10px 20px 10px;
+        padding: 15px;
         box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.1);
 
         .menu__card__text {
@@ -119,8 +173,8 @@ img {
                 font-weight: 300;
                 font-size: 1rem;
                 margin: 0;
+            }
         }
-    }
 
         .menu__card__price {
             position: absolute;
@@ -173,13 +227,36 @@ img {
         cursor: pointer;
         box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.5);
         width: 200px;
-    
+
         &:hover {
             background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
         }
 
     }
 
+}
+
+@media screen and (min-width: 768px) {
+
+    .menu {
+        align-items: center;
+        max-width: 1040px;
+    
+
+    .menu__section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .menu__card {
+        margin : 10px;
+        width: 65%;
+    }
+
+}
 }
 
 
@@ -210,13 +287,13 @@ img {
 
         li {
             display: flex;
-            align-items: center; 
+            align-items: center;
             font-family: $text-font;
             font-size: 0.87rem;
             padding-bottom: 5px;
             font-weight: 400;
 
-            &:nth-child(4){
+            &:nth-child(4) {
                 font-weight: 300;
             }
 
@@ -251,7 +328,7 @@ img {
     @media screen and (min-width: 768px) {
         ul {
             flex-direction: row;
-            justify-content: flex-end; 
+            justify-content: flex-end;
             order: 2;
             gap: 20px;
         }
