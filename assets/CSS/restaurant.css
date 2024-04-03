@@ -139,32 +139,21 @@ img {
   font-size: 1rem;
   margin: 0;
 }
-.menu .menu__card .menu__card__price {
+.menu .menu__card .price {
   position: absolute;
   font-family: "Roboto";
   font-weight: 500;
   right: 20px;
   bottom: 20px;
 }
-.menu .menu__card .menu__card__check {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
+.menu .menu__card .price .price__text {
+  font-size: 1rem;
+  margin: 0;
 }
-.menu .menu__card:hover .menu__card__check {
-  opacity: 1;
-}
-.menu .menu__card__check {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  opacity: 0;
-}
-.menu .menu__card__check:hover {
-  opacity: 1;
-}
-.menu .menu__card__check i {
-  font-size: 1.5rem;
+.menu .menu__card .price .price__icon {
+  font-size: 1rem;
+  margin-left: 5px;
+  color: white;
 }
 .menu .menu__button {
   font-family: "Roboto";

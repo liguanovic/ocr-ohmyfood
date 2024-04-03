@@ -176,42 +176,28 @@ img {
             }
         }
 
-        .menu__card__price {
+        .price {
             position: absolute;
             font-family: $text-font;
             font-weight: 500;
             right: 20px;
             bottom: 20px;
+
+            .price__text {
+                font-size: 1rem;
+                margin: 0;
+            }
+
+            .price__icon {
+                font-size: 1rem;
+                margin-left: 5px;
+            }
+            
+        }
         }
 
-        .menu__card__check {
-            position: absolute;
-            right: 20px;
-            bottom: 20px;
-        }
 
-    }
-
-    .menu__card:hover {
-        .menu__card__check {
-            opacity: 1;
-        }
-    }
-
-    .menu__card__check {
-        position: absolute;
-        right: 20px;
-        bottom: 20px;
-        opacity: 0;
-    }
-
-    .menu__card__check:hover {
-        opacity: 1;
-    }
-
-    .menu__card__check i {
-        font-size: 1.5rem;
-    }
+        
 
 
     .menu__button {
