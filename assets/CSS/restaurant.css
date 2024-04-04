@@ -8,23 +8,112 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
+  justify-content: center;
   position: relative;
+  align-items: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  z-index: 2;
 }
-header .header__button {
+header img {
+  width: 180px;
+  height: 30px;
+}
+
+.btn {
+  font-family: "Roboto";
+  font-size: 1.12rem;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   border: none;
-  background-color: transparent;
+  border-radius: 30px;
+  color: white;
+  padding: 20px 25px;
+  text-align: center;
+  margin: 30px 0 60px 0;
+  cursor: pointer;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.4);
+}
+.btn:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.8);
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    font-size: 0.9rem;
+    padding: 15px 15px;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background: #363232;
+  padding: 20px 20px 20px 25px;
+}
+footer h3 {
+  font-family: "Shrikhand";
+  font-size: 1.3rem;
+  color: white;
+  margin: 0 0 10px 0;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+}
+footer ul li {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto";
+  font-size: 0.87rem;
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+footer ul li:nth-of-type(3), footer ul li:nth-of-type(4) {
+  font-weight: 300;
+}
+footer ul a {
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto";
+  font-size: 1.12rem;
+}
+footer ul a i {
+  margin-right: 10px;
+  font-size: 0.87rem;
+}
+footer ul .footer_icon {
+  color: white;
+  gap: 5px;
+  padding-right: 10px;
+}
+footer ul .footer_icon.fa-utensils {
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  footer ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    order: 2;
+    gap: 20px;
+  }
+  footer h3 {
+    text-align: right;
+    order: 1;
+    padding: 20px 40px 20px 80px;
+  }
+  footer li:nth-of-type(5) {
+    margin-right: 40px;
+  }
+}
+
+.fa-solid.fa-arrow-left {
   cursor: pointer;
   color: black;
   font-size: 1.5rem;
   padding-left: 20px;
-}
-header img {
-  margin: 0 auto;
-  width: 180px;
-  height: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -153,7 +242,6 @@ img {
 .menu .menu__card .price .price__icon {
   font-size: 1rem;
   margin-left: 5px;
-  color: white;
 }
 .menu .menu__button {
   font-family: "Roboto";
