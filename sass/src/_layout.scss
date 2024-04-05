@@ -35,6 +35,9 @@ header {
         height: 30px;
     }
 
+    @media (min-width: 768px) {
+        height: 80px;
+}
 }
 
 .btn {

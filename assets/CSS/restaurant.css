@@ -19,6 +19,11 @@ header img {
   width: 180px;
   height: 30px;
 }
+@media (min-width: 768px) {
+  header {
+    height: 80px;
+  }
+}
 
 .btn {
   font-family: "Roboto";
@@ -159,12 +164,6 @@ header a i {
   top: 50%;
   transform: translateY(-50%);
 }
-@media (min-width: 768px) {
-  header a i {
-    left: 0%;
-    font-size: 1rem;
-  }
-}
 
 main img {
   object-fit: cover;
@@ -198,9 +197,7 @@ main img {
   padding-top: 30px;
 }
 [id=menu] [id=menu-section] header {
-  position: relative;
-  text-align: left;
-  display: inline-block;
+  padding-top: 20px;
 }
 [id=menu] [id=menu-section] header h2 {
   font-family: "Roboto";
@@ -228,7 +225,7 @@ main img {
   background: white;
   border-radius: 20px;
   margin: 0 10px;
-  padding: 15px 15px;
+  padding: 20px 20px;
   box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.1);
 }
 [id=menu] [id=menu-section] [id=items] li h3 {
@@ -261,34 +258,33 @@ main img {
   font-size: 1rem;
   margin-left: 5px;
 }
-@media screen and (min-width: 768px) {
-  [id=menu] [id=menu-section] .menu {
-    align-items: center;
-    max-width: 1040px;
-  }
-  [id=menu] [id=menu-section] .menu [id=menu-section] {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-  }
-  [id=menu] [id=menu-section] .menu [id=menu-card] {
-    margin: 10px;
-    width: 65%;
-  }
-}
 [id=menu] .btn {
   width: 200px;
-  margin: 30px auto;
+  margin: 50px auto;
 }
 
 @media screen and (min-width: 768px) {
-  header {
-    height: 80px;
+  header a i {
+    left: 0%;
+    font-size: 1rem;
   }
-  header [id=menu] {
-    max-width: 1055px;
+  [id=menu] {
+    max-width: 1050px;
+  }
+  [id=menu] header {
+    justify-self: center;
+  }
+  [id=menu-section] {
+    display: flex;
+    flex-direction: column;
+    padding: 0 150px;
+  }
+  [id=menu-section] header {
+    height: 60px;
+  }
+  [id=menu-items] {
+    padding-bottom: 20px;
+    margin: 10px;
   }
 }
 
