@@ -1,9 +1,12 @@
 $footer-font: 'Shrikhand';
 $text-font: 'Roboto';
+$title-size: 1.8rem;
 
 $primary-color: #ff79da;
 $secondary-color: #9356dc;
 $tertiary-color: #99e2d0;
+
+$box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.1);
 
 
 
@@ -43,7 +46,8 @@ header {
     color: white;
     padding: 20px 25px;
     text-align: center;
-    margin: 30px 0 60px 0;
+    text-decoration: none;
+    margin: 30px 0;
     cursor: pointer;
     box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.4);
 
@@ -58,9 +62,43 @@ header {
     }
 }
 
+.heart {
+    position: absolute;
+    font-size: 2rem;
+    right: 30px;
 
+    .heart--empty {
+        color: black;
+    }
 
+    .heart--full {
+        display: none;
+    }
 
+    &:hover .heart--empty {
+        display: none;
+    }
+
+    &:hover .heart--full {
+        display: block;
+        animation: fillHeart 3s forwards;
+        background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+    @keyframes fillHeart {
+        0% {
+            color: transparent;
+        }
+
+        100% {
+            color: transparent;
+            background-size: 100% auto;
+        }
+    }
+
+}
 
 
 footer {
@@ -109,7 +147,7 @@ footer {
             }
         }
 
-        .footer_icon {
+        .fa-solid {
             color: white;
             gap: 5px;
             padding-right: 10px;
@@ -120,22 +158,23 @@ footer {
         }
     }
 
-
-
     @media (min-width: 768px) {
+
+        flex-direction: row-reverse;
+        padding: 50px 0 0 0;
+
         ul {
-            flex-direction: row;
-            justify-content: flex-end;
+            flex-direction: row-reverse;
             order: 2;
             gap: 20px;
         }
-    
+
         h3 {
             text-align: right;
             order: 1;
             padding: 20px 40px 20px 80px;
         }
-    
+
         li {
             &:nth-of-type(5) {
                 margin-right: 40px;
@@ -143,4 +182,3 @@ footer {
         }
     }
 }
-    
