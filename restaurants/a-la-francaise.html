@@ -1,34 +1,187 @@
 <!DOCTYPE html>
 <html lang="fr">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Oh my food</title>
-    <link rel="stylesheet" href="assets/CSS/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Ohmyfood - À la française</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/restaurant.css">
 </head>
 
 <body>
     <header>
         <a href="../index.html">
-            <button class="header__button">
-                <i class="fas fa-arrow-left"></i>
-            </button>
+            <i class="fa-solid fa-arrow-left"></i>
+            <img src="../assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
         </a>
-        <img src="../assets/images/logo/ohmyfood.png" alt="logo oh my food">
     </header>
 
     <main>
-        <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
+        <img src="../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="La palette du goût">
 
-        <h1>A la française</h1>
-        <figure>
-            <i><!-- mettre l'icone --></i>
-            <i><!-- mettre l'icone --></i>
-        </figure>
+        <article id="menu">
+            <header id="menu-header">
+                <h1>À la Française</h1>
+                <span class="heart">
+                    <i class="fa-regular fa-heart heart--empty"></i>
+                    <i class="fas fa-heart heart--full"></i>
+                </span>
+            </header>
+
+            <section id="menu-section">
+                <header>
+                    <h2>Entrées</h2>
+                    <div class="underline"></div>
+                </header>
+
+                <ul id="items">
+                    <li>
+                        <section >
+                            <h3>Tartare de poulpe acidulé</h3>
+                            <p>Aux zests d'orange</p>
+                        </section>
+
+                        <b>25€</b>
+                        <i class="fas fa-check-circle"></i>
+                    </li>
+
+
+                    <li>
+                        <section>
+                            <h3>Veloute de légumes d'antan</h3>
+                            <p>Carotte, panais, topinambour</p>
+                        </section>
+
+
+                        <b>35€</b>
+                        <i class="fas fa-check-circle price__icon"></i>
+                    </li>
+
+                    <li>
+                        <section>
+                            <h3>Soupe a l'oignon</h3>
+                            <p>Revisitée</p>
+                        </section>
+
+
+                        <b>20€</b>
+                        <i class="fas fa-check-circle price__icon"></i>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="menu-section">
+                <header>
+                    <h2>Plats</h2>
+                    <div class="underline"></div>
+                </header>
+
+                <ul id="items">
+                    <li>
+                        <section>
+                            <h3>Coquilles Saint-Jacques</h3>
+                            <p>Accompagnées d'une puree de panais</p>
+                        </section>
+
+
+                        <b>40€</b>
+                        <i class="fas fa-check-circle price__icon"></i>
+                    </li>
+
+                    <li>
+                        <section>
+                            <h3>Magret de canard</h3>
+                            <p>Et parmentier de pommes de terre</p>
+                        </section>
+
+                        <b>35€</b>
+                        <i class="fas fa-check-circle price__icon"></i>
+                    </li>
+
+                    <li>
+                        <section>
+                            <h3>Pigeonneau d’Ille-et-Vilaine</h3>
+                            <p>Sur son lit de gnocchis aux légumes</p>
+                        </section>
+
+                        <b>44€</b>
+                        <i class="fas fa-check-circle price__icon"></i>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="menu-section">
+                <header >
+                    <h2>Desserts</h2>
+                    <div class="underline"></div>
+                </header>
+
+                <ul id="items">
+                    <li>
+                        <section>
+                            <h3>Pétales de violettes glacés</h3>
+                            <p>Et purée de noisettes</p>
+                        </section>
+
+                        <b>18€</b>
+                        <i class="fas fa-check-circle price__icon"></i>
+                    </li>
+
+                    <li>
+                        <section>
+                            <h3>Fondant au chocolat</h3>
+                            <p>Revisité</p>
+                        </section>
+
+                        <b>22€</b>
+                        <i class="fas fa-check-circle price__icon"></i>
+                    </li>
+
+                    <li>
+                        <section>
+                            <h3>Millefeuille croustillant</h3>
+                            <p>Myrtilles et pâte d’amande</p>
+                        </section>
+
+                        <b>23€</b>
+                        <i class="fas fa-check-circle price__icon"></i>
+                    </li>
+                </ul>
+            </section>
+
+            <button class="btn">Commander</button>
+        </article>
+
+    </main>
+
+    <footer>
+        <h3>ohmyfood</h3>
+        <ul>
+            <li>
+                <i class="fa-solid fa-utensils"></i>
+                <a href="#">Proposer un restaurant</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-hands-helping"></i>
+                <a href="#">Devenir partenaire</a>
+            </li>
+            <li>
+                <a href="#">Mentions légales</a>
+            </li>
+            <li>
+                <a href="mailto:contact@ohmyfood.fr">Contact</a>
+            </li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>

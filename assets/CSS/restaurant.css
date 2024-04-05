@@ -154,6 +154,16 @@ header a i {
   color: black;
   font-size: 1.5rem;
   padding-left: 20px;
+  left: 5%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 768px) {
+  header a i {
+    left: 0%;
+    font-size: 1rem;
+  }
 }
 
 main img {
@@ -171,168 +181,114 @@ main img {
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
 }
-[id=menu] .header {
+[id=menu] header {
   position: relative;
   display: inline-block;
-  margin: 20px 15px 0;
+  box-shadow: none;
+  margin: 0 15px;
 }
-[id=menu] .header h1 {
+[id=menu] header h1 {
   font-family: "Shrikhand";
   margin: 0;
   display: inline-block;
   position: relative;
+  font-size: 2rem;
 }
-
-[id=menu-section] .header {
+[id=menu] [id=menu-header] {
+  padding-top: 30px;
+}
+[id=menu] [id=menu-section] header {
   position: relative;
   text-align: left;
   display: inline-block;
-  margin: 0 20px 15px;
 }
-[id=menu-section] .header h2 {
+[id=menu] [id=menu-section] header h2 {
   font-family: "Roboto";
   font-weight: 200;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 5px;
-  margin-top: 40px;
+  text-transform: uppercase;
 }
-[id=menu-section] .header hr {
+[id=menu] [id=menu-section] header .underline {
   border: 2px solid #99e2d0;
   width: 40px;
   margin: 0;
 }
-[id=menu-section] .header .li {
+[id=menu] [id=menu-section] [id=items] {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+[id=menu] [id=menu-section] [id=items] li {
   display: flex;
   position: relative;
   flex-direction: column;
   background: white;
   border-radius: 20px;
-  margin: 10px 10px 20px 10px;
-  padding: 15px;
+  margin: 0 10px;
+  padding: 15px 15px;
   box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.1);
 }
-[id=menu-section] .header .li .menu__card__text {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding-left: 5px;
-}
-[id=menu-section] .header .li .menu__card__text h3 {
+[id=menu] [id=menu-section] [id=items] li h3 {
   font-family: "Roboto";
   font-weight: 500;
-  font-size: 1.12rem;
+  font-size: 1.2rem;
   margin: 0;
+  margin-bottom: 5px;
 }
-[id=menu-section] .header .li .menu__card__text p {
+[id=menu] [id=menu-section] [id=items] li p {
   font-family: "Roboto";
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0;
 }
-[id=menu-section] .header .li .b {
+[id=menu] [id=menu-section] [id=items] b {
   position: absolute;
   font-family: "Roboto";
   font-weight: 500;
   right: 20px;
   bottom: 20px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0;
 }
-[id=menu-section] .header .li i {
+[id=menu] [id=menu-section] [id=items] i {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: #99e2d0;
   font-size: 1rem;
   margin-left: 5px;
 }
 @media screen and (min-width: 768px) {
-  [id=menu-section] .menu {
+  [id=menu] [id=menu-section] .menu {
     align-items: center;
     max-width: 1040px;
   }
-  [id=menu-section] .menu .menu__section {
+  [id=menu] [id=menu-section] .menu [id=menu-section] {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin: 0 auto;
   }
-  [id=menu-section] .menu .menu__card {
+  [id=menu] [id=menu-section] .menu [id=menu-card] {
     margin: 10px;
     width: 65%;
   }
 }
-[id=menu-section] .footer {
-  display: flex;
-  flex-direction: column;
-  background: #363232;
-  padding: 20px 20px 20px 25px;
-}
-[id=menu-section] .footer h2 {
-  font-family: "Shrikhand";
-  font-size: 1.3rem;
-  color: white;
-  margin: 0 0 10px 0;
-}
-[id=menu-section] .footer ul {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 0;
-  margin: 0;
-}
-[id=menu-section] .footer ul li {
-  display: flex;
-  align-items: center;
-  font-family: "Roboto";
-  font-size: 0.87rem;
-  padding-bottom: 5px;
-  font-weight: 400;
-}
-[id=menu-section] .footer ul li:nth-child(4) {
-  font-weight: 300;
-}
-[id=menu-section] .footer ul li:nth-child(5) {
-  font-weight: 300;
-}
-[id=menu-section] .footer ul a {
-  text-decoration: none;
-  color: white;
-  font-family: "Roboto";
-  font-size: 1.12rem;
-}
-[id=menu-section] .footer ul a i {
-  margin-right: 10px;
-  font-size: 0.87rem;
-}
-[id=menu-section] .footer ul .footer_icon {
-  color: white;
-  gap: 5px;
-  padding-right: 10px;
-}
-[id=menu-section] .footer ul .footer_icon.fa-utensils {
-  padding-right: 15px;
-}
-@media screen and (min-width: 768px) {
-  [id=menu-section] .footer ul {
-    flex-direction: row;
-    justify-content: flex-end;
-    order: 2;
-    gap: 20px;
-  }
-  [id=menu-section] .footer h2 {
-    text-align: right;
-    order: 1;
-    padding: 20px 40px 20px 80px;
-  }
-  [id=menu-section] .footer li:nth-child(3) {
-    margin-right: 40px;
-  }
+[id=menu] .btn {
+  width: 200px;
+  margin: 30px auto;
 }
 
 @media screen and (min-width: 768px) {
   header {
     height: 80px;
   }
-  header .fa-solid .fa-arrow-left {
-    font-size: 1rem;
+  header [id=menu] {
+    max-width: 1055px;
   }
 }
 

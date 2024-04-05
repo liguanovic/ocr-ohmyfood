@@ -2,18 +2,32 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-  
 
-  i {
-    cursor: pointer;
-    color: black;
-    font-size: 1.5rem;
-    padding-left: 20px;
+
+    i {
+      cursor: pointer;
+      color: black;
+      font-size: 1.5rem;
+      padding-left: 20px;
+      left: 5%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @media (min-width: 768px) {
+
+       i {
+        left: 0%;
+        font-size: 1rem;
+      }
+
+    }
+
   }
-}
-  
-  
-  
+
+
+
   main img {
     object-fit: cover;
     width: 100%;
@@ -30,219 +44,146 @@
     margin-top: -35px;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
-    
 
-    .header {
+
+    header {
       position: relative;
       display: inline-block;
-      margin: 20px 15px 0;
+      box-shadow: none;
+      margin: 0 15px;
 
       h1 {
         font-family: $footer-font;
         margin: 0;
         display: inline-block;
         position: relative;
+        font-size: 2rem;
+
       }
 
     }
 
-  }
-  [id="menu-section"] {
+    [id="menu-header"] {
+      padding-top: 30px;
+    }
 
-      .header {
+
+    [id="menu-section"] {
+
+      header {
         position: relative;
         text-align: left;
         display: inline-block;
-        margin: 0 20px 15px;
 
         h2 {
           font-family: $text-font;
           font-weight: 200;
-          font-size: 1rem;
+          font-size: 1.2rem;
           margin-bottom: 5px;
-          margin-top: 40px;
+          text-transform: uppercase;
         }
 
-        hr {
+        .underline {
           border: 2px solid $tertiary-color;
           width: 40px;
           margin: 0;
         }
 
+      }
 
-      .li {
+      [id="items"] {
         display: flex;
-        position: relative;
         flex-direction: column;
-        background: white;
-        border-radius: 20px;
-        margin: 10px 10px 20px 10px;
-        padding: 15px;
-        box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.1);
+        gap: 15px;
+        padding: 0;
+        margin: 0;
 
-        .menu__card__text {
+
+        li {
           display: flex;
+          position: relative;
           flex-direction: column;
-          gap: 5px;
-          padding-left: 5px;
+          background: white;
+          border-radius: 20px;
+          margin: 0 10px;
+          padding: 15px 15px;
+          box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.1);
 
           h3 {
             font-family: $text-font;
             font-weight: 500;
-            font-size: 1.12rem;
+            font-size: 1.2rem;
             margin: 0;
+            margin-bottom: 5px;
           }
 
           p {
             font-family: $text-font;
             font-weight: 300;
-            font-size: 1rem;
+            font-size: 1.2rem;
             margin: 0;
           }
         }
 
-          .b {
-            position: absolute;
-            font-family: $text-font;
-            font-weight: 500;
-            right: 20px;
-            bottom: 20px;
-            font-size: 1rem;
-            margin: 0;
-          }
-
-          i {
-            font-size: 1rem;
-            margin-left: 5px;
-          }
-
-        }
-
-    }
-
-    @media screen and (min-width: 768px) {
-
-      .menu {
-        align-items: center;
-        max-width: 1040px;
-
-
-        .menu__section {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-          margin: 0 auto;
-        }
-
-        .menu__card {
-          margin: 10px;
-          width: 65%;
-        }
-
-
-      }
-    }
-
-
-
-
-
-
-
-    .footer {
-      display: flex;
-      flex-direction: column;
-      background: #363232;
-      padding: 20px 20px 20px 25px;
-
-      h2 {
-        font-family: $footer-font;
-        font-size: 1.3rem;
-        color: white;
-        margin: 0 0 10px 0;
-      }
-
-      ul {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        padding: 0;
-        margin: 0;
-
-        li {
-          display: flex;
-          align-items: center;
+        b {
+          position: absolute;
           font-family: $text-font;
-          font-size: 0.87rem;
-          padding-bottom: 5px;
-          font-weight: 400;
-
-          &:nth-child(4) {
-            font-weight: 300;
-          }
-
-          &:nth-child(5) {
-            font-weight: 300;
-          }
+          font-weight: 500;
+          right: 20px;
+          bottom: 20px;
+          font-size: 1.2rem;
+          margin: 0;
         }
 
-        a {
-          text-decoration: none;
-          color: white;
-          font-family: $text-font;
-          font-size: 1.12rem;
-
-          i {
-            margin-right: 10px;
-            font-size: 0.87rem;
-          }
+        i {
+          position: absolute;
+          right: 20px;
+          bottom: 20px;
+          color: $tertiary-color;
+          font-size: 1rem;
+          margin-left: 5px;
         }
 
-        .footer_icon {
-          color: white;
-          gap: 5px;
-          padding-right: 10px;
-
-          &.fa-utensils {
-            padding-right: 15px;
-          }
-        }
       }
 
       @media screen and (min-width: 768px) {
-        ul {
-          flex-direction: row;
-          justify-content: flex-end;
-          order: 2;
-          gap: 20px;
-        }
 
-        h2 {
-          text-align: right;
-          order: 1;
-          padding: 20px 40px 20px 80px;
-        }
+        .menu {
+          align-items: center;
+          max-width: 1040px;
 
-        li {
-          &:nth-child(3) {
-            margin-right: 40px;
+
+          [id="menu-section"] {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: 0 auto;
           }
+
+          [id="menu-card"] {
+            margin: 10px;
+            width: 65%;
+          }
+
+
         }
       }
     }
-  }
 
+    .btn {
+      width: 200px;
+      margin: 30px auto;
+    }
+  }
 
   @media screen and (min-width: 768px) {
 
     header {
       height: 80px;
 
-      .fa-solid .fa-arrow-left {
-        font-size: 1rem;
+      [id="menu"] {
+        max-width: 1055px;
       }
-
     }
   }
-
