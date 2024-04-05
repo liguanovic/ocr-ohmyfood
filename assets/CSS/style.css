@@ -127,7 +127,7 @@ footer ul .fa-solid.fa-utensils {
 @media (min-width: 768px) {
   footer {
     flex-direction: row-reverse;
-    padding-top: 20px;
+    padding: 50px 0 0 0;
   }
   footer ul {
     flex-direction: row-reverse;
