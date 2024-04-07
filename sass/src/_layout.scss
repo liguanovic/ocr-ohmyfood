@@ -35,7 +35,7 @@ header {
         height: 30px;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 1020px) {
         height: 80px;
 }
 }
@@ -59,7 +59,7 @@ header {
         box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.6);
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1020px) {
         font-size: 0.9rem;
         padding: 15px 15px;
     }
@@ -84,24 +84,34 @@ header {
 
     &:hover .heart--full {
         display: block;
-        animation: fillHeart 3s forwards;
+        color: transparent;
         background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
         background-clip: text;
         -webkit-background-clip: text;
+        animation: progress-bar 500ms;
+        animation-fill-mode: forwards;
     }
-
-    @keyframes fillHeart {
-        0% {
-            color: transparent;
-        }
-
-        100% {
-            color: transparent;
-            background-size: 100% auto;
-        }
-    }
-
 }
+
+    @keyframes progress-bar {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+        17% {
+            transform: scale(.18);
+        }
+        24% {
+            transform: scale(.4);
+        }
+        46% {
+            transform: scale(.81);
+        }
+        100% {
+            transform: scale(0.9);
+            opacity: 1;
+        }
+    }
 
 
 footer {
@@ -161,7 +171,7 @@ footer {
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 1020px) {
 
         flex-direction: row-reverse;
         padding: 50px 0 0 0;
