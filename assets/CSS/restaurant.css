@@ -240,6 +240,7 @@ main img {
   margin: 0 10px;
   padding: 20px 20px;
   box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.1);
+  transition: padding-right 0.8s ease;
 }
 [id=menu] [id=menu-section] [id=items] li h3 {
   font-family: "Roboto";
@@ -254,7 +255,7 @@ main img {
   font-size: 1.2rem;
   margin: 0;
 }
-[id=menu] [id=menu-section] [id=items] b {
+[id=menu] [id=menu-section] [id=items] li b {
   position: absolute;
   font-family: "Roboto";
   font-weight: 500;
@@ -262,10 +263,11 @@ main img {
   bottom: 20px;
   font-size: 1.2rem;
   margin: 0;
+  transition: right 0.8s ease;
 }
-[id=menu] [id=menu-section] [id=items] i {
+[id=menu] [id=menu-section] [id=items] li i {
   position: absolute;
-  right: 20px;
+  right: -40px;
   bottom: 30px;
   color: #99e2d0;
   font-size: 1rem;
@@ -276,35 +278,6 @@ main img {
   margin: 50px auto;
 }
 
-@media screen and (min-width: 1020px) {
-  header a i {
-    left: 0%;
-    font-size: 1rem;
-  }
-  [id=menu] {
-    max-width: 1050px;
-  }
-  [id=menu] header {
-    justify-self: center;
-  }
-  [id=menu-header] {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  [id=menu-section] {
-    display: flex;
-    flex-direction: column;
-    padding: 0 150px;
-  }
-  [id=menu-section] header {
-    height: 60px;
-  }
-  [id=menu-items] {
-    padding-bottom: 20px;
-    margin: 10px;
-  }
-}
 #menu-section:nth-of-type(1) {
   animation: fadeIn 2s forwards;
   animation-delay: 0s;
@@ -328,6 +301,39 @@ main img {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@media screen and (min-width: 1020px) {
+  header a i {
+    left: 0%;
+    font-size: 1rem;
+  }
+  [id=menu] {
+    max-width: 1050px;
+  }
+  [id=menu] header {
+    justify-self: center;
+  }
+  [id=menu-header] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  [id=menu-header] .heart {
+    position: static;
+    margin-left: 20px;
+  }
+  [id=menu-section] {
+    display: flex;
+    flex-direction: column;
+    padding: 0 150px;
+  }
+  [id=menu-section] header {
+    height: 60px;
+  }
+  [id=menu-items] {
+    padding-bottom: 20px;
+    margin: 10px;
   }
 }
 
