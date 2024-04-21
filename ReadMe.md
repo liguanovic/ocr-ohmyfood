@@ -1,3 +1,3 @@
 OhMyFood
 
-https://github.com/liguanovic/ohmyfood.git
+https://liguanovic.github.io/ocr-ohmyfood/
