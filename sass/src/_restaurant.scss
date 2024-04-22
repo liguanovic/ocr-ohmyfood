@@ -79,9 +79,6 @@
 
       }
 
-
-
-      /* Styles généraux pour les éléments #items */
       [id="items"] {
         display: flex;
         flex-direction: column;
@@ -114,7 +111,6 @@
             font-weight: 200;
             font-size: 1.2rem;
             margin: 0;
-            text-overflow: ellipsis;
           }
 
           b {
