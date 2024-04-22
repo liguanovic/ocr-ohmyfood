@@ -81,13 +81,13 @@
 
 
 
+      /* Styles généraux pour les éléments #items */
       [id="items"] {
         display: flex;
         flex-direction: column;
         gap: 15px;
         padding: 0;
         margin: 0;
-
 
         li {
           display: flex;
@@ -98,6 +98,8 @@
           margin: 0 10px;
           padding: 20px 20px;
           box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.1);
+          opacity: 0;
+          transition: opacity 0.5s ease;
 
           h3 {
             font-family: $text-font;
@@ -114,7 +116,6 @@
             margin: 0;
             text-overflow: ellipsis;
           }
-
 
           b {
             position: absolute;
@@ -133,7 +134,8 @@
             color: white;
             font-size: 1.5rem;
             margin-left: 5px;
-            transition: right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.74);
+            right: -90px;
+            transition: right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.74);
           }
 
           .price__icon {
@@ -142,7 +144,7 @@
             align-items: center;
             justify-content: center;
             top: 50%;
-            right: -90px;
+            right: 0;
             height: 100%;
             width: 80px;
             transform: translateY(-50%);
@@ -150,16 +152,11 @@
             background-color: $tertiary-color;
             color: white;
             opacity: 0;
-            transition: right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.74);
-          }
-
-          .price {
-            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.74);
+            transition: opacity 0.5s ease, right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.74);
           }
 
           &:hover .price__icon {
             opacity: 1;
-            right: 0;
           }
 
           &:hover .price {
@@ -167,29 +164,26 @@
           }
         }
       }
+
     }
+
 
     .btn {
       width: 200px;
       margin: 50px auto;
     }
 
-  }
+    .items-entry li {
+      animation: fadeIn 0.7s forwards 0.3s;
+    }
 
-  // animation//
-  .items-entry {
-    animation: fadeIn 2s forwards;
-    animation-delay: 0s;
-  }
+    .items-main li {
+      animation: fadeIn 0.7s forwards 0.7s;
+    }
 
-  .items-main {
-    animation: fadeIn 2s forwards;
-    animation-delay: 0.4s;
-  }
-
-  .items-dessert {
-    animation: fadeIn 2s forwards;
-    animation-delay: 0.8s;
+    .items-dessert li {
+      animation: fadeIn 0.7s forwards 1s;
+    }
   }
 
   @keyframes fadeIn {
@@ -203,6 +197,8 @@
       transform: translateY(0);
     }
   }
+
+
 
   @media screen and (min-width: 1020px) {
 
