@@ -158,7 +158,7 @@
           &:hover .price {
             transform: translateX(-70px);
           }
-        }
+      }
       }
 
     }
@@ -194,9 +194,7 @@
     }
   }
 
-
-
-  @media screen and (min-width: 1020px) {
+  @media screen and (min-width: 1200px) {
 
     header a i {
       left: 0%;
@@ -210,7 +208,7 @@
     }
 
     [id="menu"] {
-      max-width: 1050px;
+      max-width: 1200px;
 
 
       header {

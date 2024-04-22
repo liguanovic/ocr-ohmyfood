@@ -35,7 +35,7 @@ header {
         height: 30px;
     }
 
-    @media (min-width: 1020px) {
+    @media (min-width: 1200px) {
         height: 80px;
 }
 }
@@ -59,59 +59,110 @@ header {
         box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.6);
     }
 
-    @media screen and (min-width: 1020px) {
+    @media screen and (min-width: 1200px) {
         font-size: 0.9rem;
         padding: 15px 15px;
     }
 }
 
+/* Sélecteur de base pour l'élément .heart */
 .heart {
     position: absolute;
     font-size: 2rem;
     right: 30px;
 
+    /* Style pour l'icône de cœur vide */
     .heart--empty {
         color: black;
     }
 
+    /* Style pour l'icône de cœur rempli (initialement caché) */
     .heart--full {
         display: none;
     }
 
+    /* Animation lorsque survolé */
     &:hover .heart--empty {
         display: none;
     }
 
+    /* Lorsque survolé, afficher l'icône de cœur rempli avec animation */
     &:hover .heart--full {
         display: block;
         color: transparent;
         background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
         background-clip: text;
         -webkit-background-clip: text;
-        animation: progress-bar 900ms;
-        animation-fill-mode: forwards;
+        animation: progress-bar 900ms forwards; /* Animation de progression */
+    }
+
+    /* Pseudo-élément ::after pour inverser l'animation */
+    &::after {
+        content: ''; /* Contenu requis pour le pseudo-élément */
+        display: block;
+        position: absolute;
+    }
+
+    /* Lorsque le survol se termine, inverser l'animation */
+    &:not(:hover)::after .heart--empty {
+        display: block;
+        color: transparent;
+        background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: reverse-progress-bar 900ms forwards; /* Animation inversée */
+    }
+
+    /* Cacher l'icône de cœur rempli après inversion */
+    &:not(:hover)::after .heart--full {
+        display: none;
     }
 }
 
-    @keyframes progress-bar {
-        0% {
-            transform: scale(0);
-            opacity: 0;
-        }
-        17% {
-            transform: scale(.18);
-        }
-        24% {
-            transform: scale(.4);
-        }
-        46% {
-            transform: scale(.81);
-        }
-        100% {
-            transform: scale(0.9);
-            opacity: 1;
-        }
+/* Animation de progression (de l'icône vide à remplie) */
+@keyframes progress-bar {
+    0% {
+        transform: scale(0);
+        opacity: 0;
     }
+    17% {
+        transform: scale(0.18);
+    }
+    24% {
+        transform: scale(0.4);
+    }
+    46% {
+        transform: scale(0.81);
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+}
+
+/* Animation inversée (de l'icône remplie à vide) */
+@keyframes reverse-progress-bar {
+    0% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    17% {
+        transform: scale(0.81);
+    }
+    24% {
+        transform: scale(0.4);
+    }
+    46% {
+        transform: scale(0.18);
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+
+    
 
 
 
@@ -172,7 +223,27 @@ footer {
         }
     }
 
-    @media (min-width: 1020px) {
+    @media (min-width: 768px) and (max-width: 1199px) {
+        flex-direction: column;
+
+        ul {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        h3 {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        li {
+            text-align: center;
+        }
+    }
+
+
+    @media (min-width: 1200px) {
 
         flex-direction: row-reverse;
         padding: 50px 0 0 0;

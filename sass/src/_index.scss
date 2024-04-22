@@ -118,7 +118,7 @@ section[id="explorer"] {
         max-width: 90%;
     }
 
-    @media (min-width: 1020px) {
+    @media (min-width: 1200px) {
 
         h1 {
             font-size: 2.2rem;
@@ -197,7 +197,7 @@ section[id="explorer"] {
         }
     }
 
-    @media screen and (min-width: 1020px) {
+    @media screen and (min-width: 768px) {
 
 
         ul {
@@ -313,9 +313,22 @@ section[id="explorer"] {
     }
 }
 
+@media (min-width: 768px) {
+
+    [id="restaurants"] {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            column-gap: 40px;
+        }
+    }
+    
+}
 
 
-@media (min-width: 1020px) {
+
+@media (min-width: 1200px) {
 
     [id="restaurants"] {
         padding-bottom: 20px;
@@ -333,7 +346,7 @@ section[id="explorer"] {
     }
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 1200px) {
 
     header {
         height: 80px;

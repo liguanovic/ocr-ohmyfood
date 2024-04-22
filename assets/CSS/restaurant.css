@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body {
   margin: 0;
@@ -19,7 +20,7 @@ header img {
   width: 180px;
   height: 30px;
 }
-@media (min-width: 1020px) {
+@media (min-width: 1200px) {
   header {
     height: 80px;
   }
@@ -43,17 +44,25 @@ header img {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.6);
 }
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1200px) {
   .btn {
     font-size: 0.9rem;
     padding: 15px 15px;
   }
 }
 
+/* Sélecteur de base pour l'élément .heart */
 .heart {
   position: absolute;
   font-size: 2rem;
   right: 30px;
+  /* Style pour l'icône de cœur vide */
+  /* Style pour l'icône de cœur rempli (initialement caché) */
+  /* Animation lorsque survolé */
+  /* Lorsque survolé, afficher l'icône de cœur rempli avec animation */
+  /* Pseudo-élément ::after pour inverser l'animation */
+  /* Lorsque le survol se termine, inverser l'animation */
+  /* Cacher l'icône de cœur rempli après inversion */
 }
 .heart .heart--empty {
   color: black;
@@ -70,10 +79,26 @@ header img {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   background-clip: text;
   -webkit-background-clip: text;
-  animation: progress-bar 900ms;
-  animation-fill-mode: forwards;
+  animation: progress-bar 900ms forwards; /* Animation de progression */
+}
+.heart::after {
+  content: ""; /* Contenu requis pour le pseudo-élément */
+  display: block;
+  position: absolute;
+}
+.heart:not(:hover)::after .heart--empty {
+  display: block;
+  color: transparent;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: reverse-progress-bar 900ms forwards; /* Animation inversée */
+}
+.heart:not(:hover)::after .heart--full {
+  display: none;
 }
 
+/* Animation de progression (de l'icône vide à remplie) */
 @keyframes progress-bar {
   0% {
     transform: scale(0);
@@ -91,6 +116,26 @@ header img {
   100% {
     transform: scale(0.9);
     opacity: 1;
+  }
+}
+/* Animation inversée (de l'icône remplie à vide) */
+@keyframes reverse-progress-bar {
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  17% {
+    transform: scale(0.81);
+  }
+  24% {
+    transform: scale(0.4);
+  }
+  46% {
+    transform: scale(0.18);
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
   }
 }
 footer {
@@ -141,7 +186,24 @@ footer ul .fa-solid {
 footer ul .fa-solid.fa-utensils {
   padding-right: 15px;
 }
-@media (min-width: 1020px) {
+@media (min-width: 768px) and (max-width: 1199px) {
+  footer {
+    flex-direction: column;
+  }
+  footer ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  footer h3 {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  footer li {
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) {
   footer {
     flex-direction: row-reverse;
     padding: 50px 0 0 0;
@@ -255,10 +317,6 @@ main img {
   font-weight: 200;
   font-size: 1.2rem;
   margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: text-overflow 0.3s ease;
 }
 [id=menu] [id=menu-section] [id=items] li b {
   position: absolute;
@@ -301,8 +359,12 @@ main img {
 [id=menu] [id=menu-section] [id=items] li:hover .price {
   transform: translateX(-70px);
 }
-[id=menu] [id=menu-section] [id=items] li b:hover ~ p {
+[id=menu] [id=menu-section] [id=items] li .items-entry p,
+[id=menu] [id=menu-section] [id=items] li .items-main p,
+[id=menu] [id=menu-section] [id=items] li .items-dessert p {
+  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 [id=menu] .btn {
   width: 200px;
@@ -328,7 +390,7 @@ main img {
     transform: translateY(0);
   }
 }
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1200px) {
   header a i {
     left: 0%;
     font-size: 1rem;
@@ -339,7 +401,7 @@ main img {
     margin-left: 20px;
   }
   [id=menu] {
-    max-width: 1050px;
+    max-width: 1200px;
   }
   [id=menu] header {
     justify-self: center;
