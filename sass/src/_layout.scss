@@ -65,61 +65,53 @@ header {
     }
 }
 
-/* Sélecteur de base pour l'élément .heart */
+
 .heart {
     position: absolute;
     font-size: 2rem;
     right: 30px;
 
-    /* Style pour l'icône de cœur vide */
+
     .heart--empty {
         color: black;
     }
 
-    /* Style pour l'icône de cœur rempli (initialement caché) */
+
     .heart--full {
         display: none;
     }
 
-    /* Animation lorsque survolé */
+
     &:hover .heart--empty {
         display: none;
     }
 
-    /* Lorsque survolé, afficher l'icône de cœur rempli avec animation */
+
     &:hover .heart--full {
         display: block;
         color: transparent;
         background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
         background-clip: text;
         -webkit-background-clip: text;
-        animation: progress-bar 900ms forwards; /* Animation de progression */
+        animation: progress-bar 900ms forwards;
     }
 
-    /* Pseudo-élément ::after pour inverser l'animation */
-    &::after {
-        content: ''; /* Contenu requis pour le pseudo-élément */
-        display: block;
-        position: absolute;
-    }
-
-    /* Lorsque le survol se termine, inverser l'animation */
-    &:not(:hover)::after .heart--empty {
+    
+    &::after .heart--full {
+        content: ''; 
         display: block;
         color: transparent;
         background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
         background-clip: text;
         -webkit-background-clip: text;
-        animation: reverse-progress-bar 900ms forwards; /* Animation inversée */
+        animation: reverse-progress-bar 900ms forwards;
     }
 
-    /* Cacher l'icône de cœur rempli après inversion */
-    &:not(:hover)::after .heart--full {
+    &::after .heart--empty {
         display: none;
     }
 }
 
-/* Animation de progression (de l'icône vide à remplie) */
 @keyframes progress-bar {
     0% {
         transform: scale(0);
@@ -140,7 +132,7 @@ header {
     }
 }
 
-/* Animation inversée (de l'icône remplie à vide) */
+
 @keyframes reverse-progress-bar {
     0% {
         transform: scale(0.9);
