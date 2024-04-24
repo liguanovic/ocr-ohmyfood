@@ -291,20 +291,20 @@ main img {
   transition: opacity 0.5s ease;
   overflow: hidden;
 }
-[id=menu] [id=menu-section] li h3 {
+[id=menu] [id=menu-section] h3 {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 1.2rem;
   margin: 0;
   margin-bottom: 5px;
 }
-[id=menu] [id=menu-section] li p {
+[id=menu] [id=menu-section] p {
   font-family: "Roboto";
   font-weight: 200;
   font-size: 1.2rem;
   margin: 0;
 }
-[id=menu] [id=menu-section] li b {
+[id=menu] [id=menu-section] b {
   position: absolute;
   font-family: "Roboto";
   font-weight: 500;
@@ -314,7 +314,7 @@ main img {
   margin: 0;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.74);
 }
-[id=menu] [id=menu-section] li i {
+[id=menu] [id=menu-section] i {
   position: absolute;
   bottom: 30px;
   color: white;
@@ -323,7 +323,7 @@ main img {
   right: -90px;
   transition: right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.74);
 }
-[id=menu] [id=menu-section] li .price__icon {
+[id=menu] [id=menu-section] .price__icon {
   position: absolute;
   top: 50%;
   right: -80px;
@@ -339,11 +339,11 @@ main img {
   opacity: 0;
   transition: opacity 0.5s ease, right 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-[id=menu] [id=menu-section] li li:hover .price__icon {
+[id=menu] [id=menu-section] li:hover .price__icon {
   opacity: 1;
   right: 0;
 }
-[id=menu] [id=menu-section] li li:hover .price {
+[id=menu] [id=menu-section] li:hover .price {
   transform: translateX(-70px);
 }
 [id=menu] .btn {
