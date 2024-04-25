@@ -58,11 +58,11 @@
     }
 
 
-    [id="menu-section"] {
+    .menu-section {
       header {
         display: inline-block;
         padding-top: 20px;
-        
+
 
         h2 {
           font-family: $text-font;
@@ -80,7 +80,7 @@
 
       }
 
-      [id="items"] {
+      .items {
         display: flex;
         flex-direction: column;
         gap: 15px;
@@ -102,69 +102,81 @@
         overflow: hidden;
       }
 
-        h3 {
-          font-family: $text-font;
-          font-weight: 500;
-          font-size: 1.2rem;
-          margin: 0;
-          margin-bottom: 5px;
-        }
+      section {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
 
-        p {
-          font-family: $text-font;
-          font-weight: 200;
-          font-size: 1.2rem;
-          margin: 0;
-        }
+      h3 {
+        font-family: $text-font;
+        font-weight: 500;
+        font-size: 1.2rem;
+        margin: 0;
+        margin-bottom: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
 
-        b {
-          position: absolute;
-          font-family: $text-font;
-          font-weight: 500;
-          right: 20px;
-          bottom: 20px;
-          font-size: 1.2rem;
-          margin: 0;
-          transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.74);
-        }
+      p {
+        font-family: $text-font;
+        font-weight: 200;
+        font-size: 1.2rem;
+        margin: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
 
-        i {
-          position: absolute;
-          bottom: 30px;
-          color: white;
-          font-size: 1.5rem;
-          margin-left: 5px;
-          right: -90px;
-          transition: right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.74);
-        }
+      b {
+        position: absolute;
+        font-family: $text-font;
+        font-weight: 500;
+        right: 20px;
+        bottom: 20px;
+        font-size: 1.2rem;
+        margin: 0;
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.74);
+      }
 
-        .price__icon {
-          position: absolute;
-          top: 50%;
-          right: -80px;
-          transform: translateY(-50%);
-          height: 100%;
-          width: 80px;
-          border-radius: 0 20px 20px 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: $tertiary-color;
-          color: white;
-          opacity: 0;
-          transition: opacity 0.5s ease, right 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
+      i {
+        position: absolute;
+        bottom: 30px;
+        color: white;
+        font-size: 1.5rem;
+        margin-left: 5px;
+        right: -90px;
+        transition: right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.74);
+      }
 
-        li:hover .price__icon {
-          opacity: 1;
-          right: 0;
-        }
+      .price__icon {
+        position: absolute;
+        top: 50%;
+        right: -80px;
+        transform: translateY(-50%);
+        height: 100%;
+        width: 80px;
+        border-radius: 0 20px 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $tertiary-color;
+        color: white;
+        opacity: 0;
+        transition: opacity 0.5s ease, right 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
 
-        li:hover .price {
-          transform: translateX(-70px);
-        }
+      li:hover .price__icon {
+        opacity: 1;
+        right: 0;
+      }
 
-      
+      li:hover .price {
+        transform: translateX(-70px);
+      }
+
+
 
     }
 
@@ -232,7 +244,7 @@
       }
 
 
-      [id="menu-section"] {
+      .menu-section {
         display: flex;
         flex-direction: column;
         padding: 0 150px;

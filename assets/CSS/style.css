@@ -70,18 +70,18 @@ header img {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   background-clip: text;
   -webkit-background-clip: text;
-  animation: progress-bar 900ms forwards;
+  animation: progress-bar 1s forwards;
 }
-.heart::after .heart--full {
+.heart:hover .heart--full::after {
   content: "";
   display: block;
   color: transparent;
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   background-clip: text;
   -webkit-background-clip: text;
-  animation: reverse-progress-bar 900ms forwards;
+  animation: reverse-progress-bar 1s forwards;
 }
-.heart::after .heart--empty {
+.heart:hover .heart--empty::after {
   display: none;
 }
 
