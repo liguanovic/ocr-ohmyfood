@@ -72,18 +72,6 @@ header img {
   -webkit-background-clip: text;
   animation: progress-bar 1s forwards;
 }
-.heart:hover .heart--full::after {
-  content: "";
-  display: block;
-  color: transparent;
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  animation: reverse-progress-bar 1s forwards;
-}
-.heart:hover .heart--empty::after {
-  display: none;
-}
 
 @keyframes progress-bar {
   0% {
@@ -102,25 +90,6 @@ header img {
   100% {
     transform: scale(0.9);
     opacity: 1;
-  }
-}
-@keyframes reverse-progress-bar {
-  0% {
-    transform: scale(0.9);
-    opacity: 1;
-  }
-  17% {
-    transform: scale(0.81);
-  }
-  24% {
-    transform: scale(0.4);
-  }
-  46% {
-    transform: scale(0.18);
-  }
-  100% {
-    transform: scale(0);
-    opacity: 0;
   }
 }
 footer {
@@ -279,6 +248,7 @@ main img {
   margin: 0;
 }
 [id=menu] .menu-section li {
+  max-width: 1020px;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -289,9 +259,6 @@ main img {
   box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.1);
   opacity: 0;
   transition: opacity 0.5s ease;
-  overflow: hidden;
-}
-[id=menu] .menu-section section {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -412,10 +379,6 @@ main img {
   }
   [id=menu] .menu-section header {
     height: 60px;
-  }
-  [id=menu] [id=menu-items] {
-    padding-bottom: 20px;
-    margin: 10px;
   }
 }
 
