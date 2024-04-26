@@ -202,11 +202,11 @@ main img {
 [id=menu] {
   position: relative;
   background: #f6f6f6;
-  display: grid;
   margin: auto;
   margin-top: -35px;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
+  padding-bottom: 1px;
 }
 [id=menu] header {
   display: flex;
@@ -218,15 +218,17 @@ main img {
   margin: 0;
   display: inline-block;
   position: relative;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 [id=menu] [id=menu-header] {
-  display: inline-block;
-  padding-top: 30px;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
 }
 [id=menu] .menu-section header {
   display: inline-block;
-  padding-top: 20px;
 }
 [id=menu] .menu-section header h2 {
   font-family: "Roboto";
@@ -248,7 +250,6 @@ main img {
   margin: 0;
 }
 [id=menu] .menu-section li {
-  max-width: 1020px;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -260,13 +261,11 @@ main img {
   opacity: 0;
   transition: opacity 0.5s ease;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 [id=menu] .menu-section h3 {
   font-family: "Roboto";
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0;
   margin-bottom: 5px;
   overflow: hidden;
@@ -276,7 +275,7 @@ main img {
 [id=menu] .menu-section p {
   font-family: "Roboto";
   font-weight: 200;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0;
   overflow: hidden;
   white-space: nowrap;
@@ -288,7 +287,7 @@ main img {
   font-weight: 500;
   right: 20px;
   bottom: 20px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.74);
 }
@@ -325,6 +324,9 @@ main img {
   transform: translateX(-70px);
 }
 [id=menu] .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   margin: 50px auto;
 }
@@ -372,6 +374,9 @@ main img {
   [id=menu] [id=menu-header] header {
     display: block;
   }
+  [id=menu] [id=menu-header] h1 {
+    font-size: 2rem;
+  }
   [id=menu] .menu-section {
     display: flex;
     flex-direction: column;
@@ -379,6 +384,9 @@ main img {
   }
   [id=menu] .menu-section header {
     height: 60px;
+  }
+  [id=menu] .menu-section li {
+    max-width: 1020px;
   }
 }
 
