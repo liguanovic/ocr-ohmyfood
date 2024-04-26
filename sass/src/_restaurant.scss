@@ -90,10 +90,16 @@
         margin: 0;
       }
 
+      section {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
       li {
         display: flex;
         position: relative;
-        flex-direction: column;
         background: white;
         border-radius: 20px;
         margin: 0 10px;
@@ -126,11 +132,9 @@
       }
 
       b {
-        position: absolute;
+        align-self: end;
         font-family: $text-font;
         font-weight: 500;
-        right: 20px;
-        bottom: 20px;
         font-size: 1.1rem;
         margin: 0;
         transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.74);
