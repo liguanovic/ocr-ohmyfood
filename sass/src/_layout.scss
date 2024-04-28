@@ -71,21 +71,14 @@ header {
     font-size: 2rem;
     right: 30px;
 
-
     .heart--empty {
+        position: absolute;
         color: black;
     }
-
 
     .heart--full {
         display: none;
     }
-
-
-    &:hover .heart--empty {
-        display: none;
-    }
-
 
     &:hover .heart--full {
         display: block;
@@ -94,6 +87,15 @@ header {
         background-clip: text;
         -webkit-background-clip: text;
         animation: progress-bar 1s forwards;
+    }
+
+    &:not(:hover) .heart--full {
+        display: block;
+        color: transparent;
+        background: linear-gradient(100.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: progress-bar-reverse 1s forwards;
     }
 
 }
@@ -113,8 +115,28 @@ header {
         transform: scale(0.81);
     }
     100% {
+        transform: scale(0.85);
+        opacity: 1;
+    }
+}
+
+@keyframes progress-bar-reverse {
+    0% {
         transform: scale(0.9);
         opacity: 1;
+    }
+    17% {
+        transform: scale(0.81);
+    }
+    24% {
+        transform: scale(0.4);
+    }
+    46% {
+        transform: scale(0.18);
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
     }
 }
 
@@ -223,44 +245,3 @@ footer {
         }
     }
 }
-
-
-
-
-// .heart {
-//     position: absolute;
-//     font-size: 2rem;
-//     right: 30px;
-
-//     .heart--empty {
-//         color: black;
-//         opacity: 1;
-//         transition: opacity 0.3s ease; /* Transition pour l'animation de disparition */
-//     }
-
-//     .heart--full {
-//         display: absolute;
-//         color: transparent;
-//         background: linear-gradient(200.64deg, #FF79DA -5.2%, #9356DC 110.74%);
-//         background-clip: text;
-//         -webkit-background-clip: text;
-//         opacity: 0;
-//         transform: scale(0);
-//         transition: opacity 1s ease, transform 1s ease; /* Transitions pour l'animation d'apparition */
-//     }
-
-//     &:hover .heart--empty {
-//         display: none;
-//     }
-
-//     &:hover .heart--full {
-//         opacity: 1;
-//         transform: scale(0.9);
-//     }
-
-//     /* Animation inverse quand l'élément n'est pas survolé */
-//     &:not(:hover) .heart--full {
-//         opacity: 0; /* Masquer l'élément */
-//         transform: scale(0); /* Réduire l'échelle */
-//     }
-// }
