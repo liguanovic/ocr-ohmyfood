@@ -169,11 +169,11 @@ section[id="explorer"] {
             gap: 25px;
             box-shadow: $box-shadow;
 
-            &:hover {
-                i {
-                    color: $secondary-color;
-                }
+            .fa-store
+            {
+                color: $secondary-color
             }
+
         }
 
         i {
