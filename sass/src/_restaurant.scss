@@ -58,6 +58,10 @@
       flex-wrap: wrap;
       justify-content: left;
       align-items: center;
+
+      .heart{
+      top: 30px;
+      }
     }
 
 
@@ -247,6 +251,11 @@
 
         h1 {
           font-size: 2rem;
+        }
+
+        .heart{
+          position: static;
+          margin-bottom: 30px;
         }
       }
 
